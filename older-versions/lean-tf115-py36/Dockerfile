@@ -9,7 +9,7 @@
 # keras         2.3.1  (pip)
 # ==================================================================
 
-FROM nvidia/cuda:10.0-cudnn7-runtime-ubuntu18.04
+FROM nvidia/cuda:9.1-runtime-ubuntu17.04
 ENV LANG C.UTF-8
 RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
     PIP_INSTALL="python -m pip --no-cache-dir install --upgrade" && \
@@ -113,7 +113,7 @@ RUN APT_INSTALL="apt-get install -y --no-install-recommends" && \
 # ------------------------------------------------------------------
 
     $PIP_INSTALL \
-        tensorflow-gpu==1.15 \
+        tensorflow-gpu==1.6 \
         && \
 
 # ==================================================================
